@@ -1,0 +1,33 @@
+
+;heroku
+const PORT = process.env.PORT || 3000;
+
+app.use(function (req, res, next) {
+  if (req.headers['x-forwarded-proto'] === 'http') {
+    next();
+  } else {
+    res.redirect('http://' + req.hostname + req.url);
+  }
+});
+
+app.use(express.static('public'));
+
+app.listen(PORT, function () {
+  console.log('Express server is up on PORT' + PORT);
+});
+
+;package.json
+...
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+...
+
+;commands
+git commit -a -m 'deploy...'
+git push
+git heroku create
+git remote -v
+git push heroku master
+heroku open
