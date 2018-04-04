@@ -13,7 +13,7 @@ module.exports = {
             .then(function (res) {
                 // Success alert(res.cod); 
                 console.log(res);
-                // debugger;
+                debugger;
                 if (res.data.cod && res.data.message) {
                     throw new Error(res.data.message);
                 } else {
