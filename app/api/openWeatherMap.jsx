@@ -4,6 +4,7 @@ const OPEN_WEATHER_MAP_URL = 'https://api.openweathermap.org/data/2.5/weather?ap
         '60b31&units=imperial';
 module.exports = {
     getTemp: function (location) {
+        console.log('API Path full: ' + OPEN_WEATHER_MAP_URL);
         var encodeLocation = encodeURIComponent(location);
         var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodeLocation}`;
         // debugger;
