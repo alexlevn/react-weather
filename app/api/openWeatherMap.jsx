@@ -11,7 +11,8 @@ module.exports = {
             .get(requestUrl)
             .then(function (res) {
                 // Success alert(res.cod); 
-                debugger;
+                console.log(res);
+                // debugger;
                 if (res.data.cod && res.data.message) {
                     throw new Error(res.data.message);
                 } else {
