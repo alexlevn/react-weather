@@ -21,7 +21,7 @@ module.exports = {
                 }
             }, function (res) {
                 // debugger;
-                throw new Error(res.response.data);
+                throw new Error(res.response.data.message);
             });
     }
 }
