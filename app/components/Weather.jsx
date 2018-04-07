@@ -59,13 +59,13 @@ var Weather = React.createClass({
           </div>
         );
       } else{
-        // return(<h3>.......</h3>);
+        // return(<h3>.......</h3>); /// Xong 57, bắt đầu 58
       }
     }
 
     return (
       <div>
-        <h3 className="text-center">Get Weather</h3>
+        <h3 className="text-center page-title">Get Weather</h3>
         <WeatherForm onSearch={this.handleSearch}/> 
         {renderMessage()}
         {renderError()}
